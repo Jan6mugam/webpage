@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Love, Written in Cards</title>
+    <style>
+        body {
+            font-family: 'Georgia', serif;
+            color: #ffffff;
+            background: linear-gradient(120deg, #ff4b5c, #343a40);
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        h1 {
+            font-size: 3em;
+            margin: 20px;
+        }
+        p {
+            font-size: 1.5em;
+            padding: 0 20px;
+        }
+        .section {
+            padding: 50px 20px;
+            border-bottom: 2px solid #fff;
+        }
+        .day-night {
+            background: radial-gradient(circle, rgba(255, 75, 92, 1) 0%, rgba(52, 58, 64, 1) 100%);
+        }
+        .suits, .court-cards, .lunar-cycles, .weeks, .joker {
+            background-color: #343a40;
+        }
+        .suits img, .court-cards img, .lunar-cycles img {
+            width: 50px;
+            margin: 20px;
+        }
+        .card {
+            display: inline-block;
+            padding: 10px;
+            text-align: center;
+        }
+        .joker img {
+            width: 100px;
+        }
+        footer {
+            background-color: #212529;
+            padding: 20px;
+        }
+        button {
+            background-color: #ff4b5c;
+            color: white;
+            font-size: 1.5em;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            border-radius: 10px;
+        }
+        button:hover {
+            background-color: #ff6f7a;
+        }
+        #qr-code {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Our Love, Written in Cards</h1>
+
+    <div class="section day-night">
+        <h2>Day and Night</h2>
+        <p>Just like day turns into night, our love flows effortlessly through time.</p>
+    </div>
+
+    <div class="section suits">
+        <h2>The Four Suits Represent Our Seasons</h2>
+        <div class="card"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Heart_%28card_suit%29.svg/768px-Heart_%28card_suit%29.svg.png" alt="Hearts"><p>Spring: Our love blossoms.</p></div>
+        <div class="card"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Diamond_%28card_suit%29.svg/768px-Diamond_%28card_suit%29.svg.png" alt="Diamonds"><p>Summer: Our love shines bright.</p></div>
+        <div class="card"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Spade_%28card_suit%29.svg/768px-Spade_%28card_suit%29.svg.png" alt="Spades"><p>Winter: Our love remains evergreen.</p></div>
+        <div class="card"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Club_%28card_suit%29.svg/768px-Club_%28card_suit%29.svg.png" alt="Clubs"><p>Autumn: Our love grows stronger.</p></div>
+    </div>
+
+    <div class="section court-cards">
+        <h2>12 Months, 12 Court Cards</h2>
+        <p>Just as the 12 court cards mark the months, our love endures every day of every month.</p>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/King_of_hearts.svg/200px-King_of_hearts.svg.png" alt="King">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Queen_of_hearts.svg/200px-Queen_of_hearts.svg.png" alt="Queen">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Jack_of_hearts2.svg/200px-Jack_of_hearts2.svg.png" alt="Jack">
+    </div>
+
+    <div class="section lunar-cycles">
+        <h2>13 Values: The Lunar Cycles</h2>
+        <p>Our love follows the moon, steady, constant, and always full of light.</p>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/Ace_of_hearts.svg/200px-Ace_of_hearts.svg.png" alt="Ace">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/10_of_hearts.svg/200px-10_of_hearts.svg.png" alt="Ten">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/King_of_diamonds.svg/200px-King_of_diamonds.svg.png" alt="King">
+    </div>
+
+    <div class="section weeks">
+        <h2>52 Weeks, 52 Cards</h2>
+        <p>There are 52 cards in a pack, just as there are 52 weeks in a year. Each week with you is a card in our love story.</p>
+    </div>
+
+    <div class="section joker">
+        <h2>The Joker, 365 Days of Love</h2>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Joker_black_2.svg/200px-Joker_black_2.svg.png" alt="Joker">
+        <p>Our love extends beyond the ordinary—just like the Joker turns 365 into 366, you make every extra day magical.</p>
+    </div>
+
+    <footer>
+        <p>A love measured in cards, yet infinite in meaning.</p>
+        <button onclick="generateQR()">Play our love story</button>
+        <div id="qr-code"></div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrious/4.0.2/qrious.min.js"></script>
+    <script>
+        function generateQR() {
+            var qr = new QRious({
+                element: document.getElementById('qr-code'),
+                value: window.location.href,
+                size: 150
+            });
+        }
+    </script>
+</body>
+</html>
